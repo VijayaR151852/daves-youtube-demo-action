@@ -16,9 +16,9 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 20.13.1
       - run: npm ci
       - run: npm run build
       - run: npx semantic-release
         env:
-          GITHUB_TOKEN: ${{ steps.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
