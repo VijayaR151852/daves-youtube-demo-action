@@ -21,8 +21,7 @@ jobs:
 
       - name: Install commitlint dependencies
         run: |
-          npm install commitlint@latest
-          npm install conventional-changelog-conventionalcommits
+          npm install --save-dev commitlint @commitlint/config-conventional
 
       - name: Print versions
         run: |
